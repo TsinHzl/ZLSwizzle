@@ -15,11 +15,11 @@
 
 + (void)load {
     //交换不同类 的  对象方法 (与自定义类TestClass1的test1交换)
-    ZLSwizzlefDifferentClassInstanceMethod(NSClassFromString(@"TestClass1"), [self class], @selector(test1), @selector(test2));
+    ZLSwizzleDifferentClassInstanceMethod(NSClassFromString(@"TestClass1"), [self class], @selector(test1), @selector(test2));
     //交换不同类 的 对象方法  (与NSArray的containsObject:进行交换)
-    ZLSwizzlefDifferentClassInstanceMethod(NSArray.class, [self class], @selector(containsObject:), @selector(test3:));
+    ZLSwizzleDifferentClassInstanceMethod(NSArray.class, [self class], @selector(containsObject:), @selector(test3:));
     //交换不同类 的 类方法  友好提示:自定义的方法可以写在任何的自定义类中
-    ZLSwizzlefDifferentClassClassMethod(NSClassFromString(@"TestClass1"), [self class], @selector(sharedClass1), @selector(sharedClass2));
+    ZLSwizzleDifferentClassClassMethod(NSClassFromString(@"TestClass1"), [self class], @selector(sharedClass1), @selector(sharedClass2));
 }
 
 - (void)test2 {

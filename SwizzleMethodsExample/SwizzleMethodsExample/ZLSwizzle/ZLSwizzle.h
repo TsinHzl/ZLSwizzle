@@ -39,7 +39,7 @@ extern void ZLSwizzleInstanceMethod(Class cls, SEL originalSelector, SEL swizzle
 @param originalSelector 被交换的方法
 @param swizzledSelector 用来交换的方法
   */
-extern void ZLSwizzlefDifferentClassInstanceMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector);
+extern void ZLSwizzleDifferentClassInstanceMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector);
 
 
 /**
@@ -49,5 +49,5 @@ extern void ZLSwizzlefDifferentClassInstanceMethod(Class originalCls,Class swizz
 @param originalSelector 被交换的方法
 @param swizzledSelector 用来交换的方法
   */
-extern void ZLSwizzlefDifferentClassClassMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector);
+extern void ZLSwizzleDifferentClassClassMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector);
 

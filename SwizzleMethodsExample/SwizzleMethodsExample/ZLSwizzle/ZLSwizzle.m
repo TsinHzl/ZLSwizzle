@@ -88,7 +88,7 @@ void ZLSwizzleInstanceMethod(Class cls, SEL originalSelector, SEL swizzledSelect
 @param originalSelector 被交换的方法
 @param swizzledSelector 用来交换的方法
   */
-void ZLSwizzlefDifferentClassInstanceMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector) {
+void ZLSwizzleDifferentClassInstanceMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector) {
     if (!originalCls || !swizzledCls) {
         NSLog(@"交换方法失败--请保证交换的类名不为空");
         return;
@@ -122,7 +122,7 @@ void ZLSwizzlefDifferentClassInstanceMethod(Class originalCls,Class swizzledCls,
 @param originalSelector 被交换的方法
 @param swizzledSelector 用来交换的方法
   */
-void ZLSwizzlefDifferentClassClassMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector) {
+void ZLSwizzleDifferentClassClassMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector) {
     if (!originalCls || !swizzledCls) {
         NSLog(@"交换方法失败--请保证交换的类名不为空");
         return;

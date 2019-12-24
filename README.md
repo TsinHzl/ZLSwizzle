@@ -9,7 +9,7 @@
 
 ```objective-c
 /**
-@brief 交换不同类中两个  对象方法    友好提示:自定义的方法可以写在任何的自定义类中 ）
+@brief 交换不同类中两个  对象方法   （ 友好提示:自定义的方法可以写在任何的自定义类中 ）
 @param originalCls 被交换的类
 @param swizzledCls 用来交换的类
 @param originalSelector 被交换的方法

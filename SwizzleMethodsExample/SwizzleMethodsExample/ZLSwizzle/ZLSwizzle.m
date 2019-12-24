@@ -99,14 +99,17 @@ void ZLSwizzleDifferentClassInstanceMethod(Class originalCls,Class swizzledCls,S
         return;
     }
     
+    //通过class_getClassMethod 获取两个方法Method
     Method originalMethod = class_getInstanceMethod(originalCls, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(swizzledCls, swizzledSelector);
     
+    //交换之前，先对自定义方法进行添加
     BOOL didAddMethod = class_addMethod(originalCls,
                                         swizzledSelector,
                                         method_getImplementation(swizzledMethod),
                                         method_getTypeEncoding(swizzledMethod));
     
+    //如果添加成功，则进行交换
     if (didAddMethod) {
         method_exchangeImplementations(originalMethod, class_getInstanceMethod(originalCls, swizzledSelector));
     } else {
@@ -132,18 +135,21 @@ void ZLSwizzleDifferentClassClassMethod(Class originalCls,Class swizzledCls,SEL 
         NSLog(@"交换方法失败--请保证交换的方法名不为空");
         return;
     }
-    
+    //获取元类对象，因为类方法是存在于元类对象当中的
     Class originalMetaCls = object_getClass(originalCls);
     Class swizzledMetaCls = object_getClass(swizzledCls);
     
+    //通过class_getClassMethod 获取两个方法Method
     Method originalMethod = class_getClassMethod(originalMetaCls, originalSelector);
     Method swizzledMethod = class_getClassMethod(swizzledMetaCls, swizzledSelector);
     
+    //交换之前，先对自定义方法进行添加
     BOOL didAddMethod = class_addMethod(originalMetaCls,
                                         swizzledSelector,
                                         method_getImplementation(swizzledMethod),
                                         method_getTypeEncoding(swizzledMethod));
     
+    //如果添加成功，则进行交换
     if (didAddMethod) {
         method_exchangeImplementations(originalMethod, class_getClassMethod(originalMetaCls, swizzledSelector));
     } else {

@@ -1,11 +1,11 @@
 # ZLSwizzle
-###交换两个不同OC类的方法，以达到hook的效果
+### 交换两个不同OC类的方法，以达到hook的效果
 
-##交换方法见头文件ZLSwizzle.h
+## 交换方法见头文件ZLSwizzle.h
 
-####通过我封装的函数，你可以在自定义的任何类里面自定义需要拿去交换的方法，之后将自定义的方法以及该方法在的那个类对象传过去即可
+#### 通过我封装的函数，你可以在自定义的任何类里面自定义需要拿去交换的方法，之后将自定义的方法以及该方法在的那个类对象传过去即可
 
-####交换不同类的方法如下：
+#### 交换不同类的方法如下：
 
 ```objective-c
 /**
@@ -28,7 +28,7 @@ extern void ZLSwizzleDifferentClassInstanceMethod(Class originalCls,Class swizzl
 extern void ZLSwizzleDifferentClassClassMethod(Class originalCls,Class swizzledCls,SEL originalSelector, SEL swizzledSelector);
 ```
 
-####交换相同类的方法如下：
+#### 交换相同类的方法如下：
 
 ```objective-c
 /**
@@ -50,7 +50,7 @@ extern void ZLSwizzleInstanceMethod(Class cls, SEL originalSelector, SEL swizzle
 
 无论是交换类方法，还是实例方法，通过我封装的方法，你都只需传入类对象即可，即是调用某个类或者对象的class方法，或者是通过NSClassFromString(@"ClassString")函数获取到的值传入即可
 
-#####详细代码如下：
+##### 详细代码如下：
 
 ```objective-c
 #import "TestClass2.h"

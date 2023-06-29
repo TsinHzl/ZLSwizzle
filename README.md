@@ -63,8 +63,10 @@ extern void ZLSwizzleInstanceMethod(Class cls, SEL originalSelector, SEL swizzle
 + (void)load {
     //交换不同类 的  对象方法 (与自定义类TestClass1的test1交换)
     ZLSwizzleDifferentClassInstanceMethod(NSClassFromString(@"TestClass1"), [self class], @selector(test1), @selector(test2));
+  
     //交换不同类 的 对象方法  (与NSArray的containsObject:进行交换)
     ZLSwizzleDifferentClassInstanceMethod(NSArray.class, [self class], @selector(containsObject:), @selector(test3:));
+  
     //交换不同类 的 类方法  友好提示:自定义的方法可以写在任何的自定义类中
     ZLSwizzleDifferentClassClassMethod(NSClassFromString(@"TestClass1"), [self class], @selector(sharedClass1), @selector(sharedClass2));
 }
@@ -73,6 +75,7 @@ extern void ZLSwizzleInstanceMethod(Class cls, SEL originalSelector, SEL swizzle
     NSLog(@"test2");
     [self test2];
 }
+
 - (BOOL)test3:(id)obj {
     NSLog(@"test2");
     return [self test3:obj];

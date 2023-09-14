@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA98177923B20B8F00C9C0E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98177123B20B8E00C9C0E7 /* main.m */; };
 		FA98177A23B20B8F00C9C0E7 /* TestClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98177223B20B8E00C9C0E7 /* TestClass2.m */; };
-		FA98177B23B20B8F00C9C0E7 /* ZLSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98177623B20B8E00C9C0E7 /* ZLSwizzle.m */; };
 		FA98177C23B20B8F00C9C0E7 /* TestClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98177823B20B8F00C9C0E7 /* TestClass1.m */; };
+		FAE6C2DB2AB2A6540070AB44 /* ZLSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE6C2D92AB2A6540070AB44 /* ZLSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,9 +31,9 @@
 		FA98177223B20B8E00C9C0E7 /* TestClass2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass2.m; sourceTree = "<group>"; };
 		FA98177323B20B8E00C9C0E7 /* TestClass1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass1.h; sourceTree = "<group>"; };
 		FA98177423B20B8E00C9C0E7 /* TestClass2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass2.h; sourceTree = "<group>"; };
-		FA98177623B20B8E00C9C0E7 /* ZLSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwizzle.m; sourceTree = "<group>"; };
-		FA98177723B20B8E00C9C0E7 /* ZLSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwizzle.h; sourceTree = "<group>"; };
 		FA98177823B20B8F00C9C0E7 /* TestClass1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass1.m; sourceTree = "<group>"; };
+		FAE6C2D92AB2A6540070AB44 /* ZLSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwizzle.m; sourceTree = "<group>"; };
+		FAE6C2DA2AB2A6540070AB44 /* ZLSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwizzle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,23 +66,24 @@
 		FA98176923B20B6D00C9C0E7 /* SwizzleMethodsExample */ = {
 			isa = PBXGroup;
 			children = (
+				FAE6C2D82AB2A6540070AB44 /* ZLSwizzle */,
 				FA98177123B20B8E00C9C0E7 /* main.m */,
 				FA98177323B20B8E00C9C0E7 /* TestClass1.h */,
 				FA98177823B20B8F00C9C0E7 /* TestClass1.m */,
 				FA98177423B20B8E00C9C0E7 /* TestClass2.h */,
 				FA98177223B20B8E00C9C0E7 /* TestClass2.m */,
-				FA98177523B20B8E00C9C0E7 /* ZLSwizzle */,
 			);
 			path = SwizzleMethodsExample;
 			sourceTree = "<group>";
 		};
-		FA98177523B20B8E00C9C0E7 /* ZLSwizzle */ = {
+		FAE6C2D82AB2A6540070AB44 /* ZLSwizzle */ = {
 			isa = PBXGroup;
 			children = (
-				FA98177723B20B8E00C9C0E7 /* ZLSwizzle.h */,
-				FA98177623B20B8E00C9C0E7 /* ZLSwizzle.m */,
+				FAE6C2DA2AB2A6540070AB44 /* ZLSwizzle.h */,
+				FAE6C2D92AB2A6540070AB44 /* ZLSwizzle.m */,
 			);
-			path = ZLSwizzle;
+			name = ZLSwizzle;
+			path = ../../ZLSwizzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA98177B23B20B8F00C9C0E7 /* ZLSwizzle.m in Sources */,
+				FAE6C2DB2AB2A6540070AB44 /* ZLSwizzle.m in Sources */,
 				FA98177923B20B8F00C9C0E7 /* main.m in Sources */,
 				FA98177C23B20B8F00C9C0E7 /* TestClass1.m in Sources */,
 				FA98177A23B20B8F00C9C0E7 /* TestClass2.m in Sources */,
